@@ -29,6 +29,7 @@
   "dependencies": {
     "@emurgo/cardano-serialization-lib-browser": "10.0.4",
     "@emurgo/cardano-serialization-lib-nodejs": "10.0.4",
+    "@emurgo/cip14-js": "3.0.1",
     "buffer": "6.0.3",
     "next": "12.1.6",
     "react": "18.1.0",

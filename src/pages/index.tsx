@@ -43,27 +43,27 @@ export default function Home() {
 
         <div>
           <p className={styles.code}>getBalance()</p>
-          <code className={styles.code} id="walletBalance"></code>
+          <pre className={styles.code} id="walletBalance"></pre>
           <p></p>
 
           <p className={styles.code}>getChangeAddress()</p>
-          <code className={styles.code} id="changeAddress"></code>
+          <pre className={styles.code} id="changeAddress"></pre>
           <p></p>
 
           <p className={styles.code}>getCollateral()</p>
-          <code className={styles.code} id="collateral"></code>
+          <pre className={styles.code} id="collateral"></pre>
           <p></p>
 
           <p className={styles.code}>getNetworkId()</p>
-          <code className={styles.code} id="networkID"></code>
+          <pre className={styles.code} id="networkID"></pre>
           <p></p>
 
           <p className={styles.code}>getRewardAddresses()</p>
-          <code className={styles.code} id="rewardAddresses"></code>
+          <pre className={styles.code} id="rewardAddresses"></pre>
           <p></p>
 
           <p className={styles.code}>getUnusedAddresses()</p>
-          <code className={styles.code} id="unusedAddresses"></code>
+          <pre className={styles.code} id="unusedAddresses"></pre>
           <p></p>
 
           <p className={styles.code}>getUsedAddresses()</p>
@@ -71,7 +71,7 @@ export default function Home() {
           <p></p>
 
           <a className={styles.code}>getUtxos()</a>
-          <code className={styles.code} id="utxos"></code>
+          <pre className={styles.code} id="utxos"></pre>
           <p></p>
         </div>
       </main>
