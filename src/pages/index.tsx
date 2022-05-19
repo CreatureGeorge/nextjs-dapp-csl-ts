@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
-import {enableWallet} from '../cardano/cardanoDappDev'
+import { enableWallet } from '../cardano/cardanoDappDev'
 
 export default function Home() {
   return (
@@ -24,13 +24,13 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <button className={styles.card} onClick={() => enableWallet("nami")}>
+          <button className={styles.card} onClick={() => enableWallet('nami')}>
             <h2>NAMI </h2>
           </button>
-          <button className={styles.card} onClick={() => enableWallet("flint")}>
+          <button className={styles.card} onClick={() => enableWallet('flint')}>
             <h2>FLINT </h2>
           </button>
-          <button className={styles.card} onClick={() => enableWallet("eternl")}>
+          <button className={styles.card} onClick={() => enableWallet('eternl')}>
             <h2>ETERNL</h2>
           </button>
           <button className={styles.card}>
@@ -40,35 +40,35 @@ export default function Home() {
 
         <div>
           <p className={styles.code}>getBalance()</p>
-          <code className={styles.code} id='walletBalance'></code>
+          <code className={styles.code} id="walletBalance"></code>
           <p></p>
 
           <p className={styles.code}>getChangeAddress()</p>
-          <code className={styles.code} id='changeAddress'></code>
+          <code className={styles.code} id="changeAddress"></code>
           <p></p>
           
           <p className={styles.code}>getCollateral()</p>
-          <code className={styles.code} id='collateral'></code>
+          <code className={styles.code} id="collateral"></code>
           <p></p>
 
           <p className={styles.code}>getNetworkId()</p>
-          <code className={styles.code} id='networkID'></code>
+          <code className={styles.code} id="networkID"></code>
           <p></p>
 
           <p className={styles.code}>getRewardAddresses()</p>
-          <code className={styles.code} id='rewardAddresses'></code>
+          <code className={styles.code} id="rewardAddresses"></code>
           <p></p>
 
           <p className={styles.code}>getUnusedAddresses()</p>
-          <code className={styles.code} id='unusedAddresses' ></code>
+          <code className={styles.code} id="unusedAddresses"></code>
           <p></p>
 
           <p className={styles.code}>getUsedAddresses()</p>
-          <pre className={styles.code} id='usedAddresses'></pre>
+          <pre className={styles.code} id="usedAddresses"></pre>
           <p></p>
 
           <a className={styles.code}>getUtxos()</a>
-          <code className={styles.code} id='utxos'></code>
+          <code className={styles.code} id="utxos"></code>
           <p></p>
         </div>
       </main>
