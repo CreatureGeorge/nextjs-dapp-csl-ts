@@ -3,56 +3,73 @@ import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
+import {enableWallet} from '../cardano/cardanoDappDev'
+
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>TypeScript starter for Next.js</title>
+        <title>Dapper Boi</title>
         <meta
           name="description"
-          content="TypeScript starter for Next.js that includes all you need to build amazing apps"
+          content="Dapper Boi: Give me all yo ADAs [next.js typescript to mess around with csl]"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
         <p className={styles.description}>
-          Get started by editing{` `}
-          <code className={styles.code}>src/pages/index.tsx</code>
+          Get started by connecting your wallet : {` `}
+          <code className={styles.code}>Nami, Flint, Eternl [CCVault]</code>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <button className={styles.card} onClick={() => enableWallet("nami")}>
+            <h2>NAMI </h2>
+          </button>
+          <button className={styles.card} onClick={() => enableWallet("flint")}>
+            <h2>FLINT </h2>
+          </button>
+          <button className={styles.card} onClick={() => enableWallet("eternl")}>
+            <h2>ETERNL</h2>
+          </button>
+          <button className={styles.card}>
+            <h2>Simple TX</h2>
+          </button>
+        </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <div>
+          <p className={styles.code}>getBalance()</p>
+          <code className={styles.code} id='walletBalance'></code>
+          <p></p>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <p className={styles.code}>getChangeAddress()</p>
+          <code className={styles.code} id='changeAddress'></code>
+          <p></p>
+          
+          <p className={styles.code}>getCollateral()</p>
+          <code className={styles.code} id='collateral'></code>
+          <p></p>
 
-          <a
-            href="https://vercel.com/new?utm_source=typescript-nextjs-starter"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <p className={styles.code}>getNetworkId()</p>
+          <code className={styles.code} id='networkID'></code>
+          <p></p>
+
+          <p className={styles.code}>getRewardAddresses()</p>
+          <code className={styles.code} id='rewardAddresses'></code>
+          <p></p>
+
+          <p className={styles.code}>getUnusedAddresses()</p>
+          <code className={styles.code} id='unusedAddresses' ></code>
+          <p></p>
+
+          <p className={styles.code}>getUsedAddresses()</p>
+          <pre className={styles.code} id='usedAddresses'></pre>
+          <p></p>
+
+          <a className={styles.code}>getUtxos()</a>
+          <code className={styles.code} id='utxos'></code>
+          <p></p>
         </div>
       </main>
 

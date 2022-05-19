@@ -4,3 +4,11 @@ import '@/styles/global.css';
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
+
+export{};
+
+declare global {
+    interface Window {
+        cardano?: any;
+    }
+  }
