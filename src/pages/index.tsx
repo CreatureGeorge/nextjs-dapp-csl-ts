@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from '@/styles/Home.module.css';
 
-import { enableWallet } from '../cardano/cardanoDappDev'
+import { enableWallet } from '../cardano/cardanoDappDev';
 
 export default function Home() {
   return (
@@ -24,14 +24,17 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <button className={styles.card} onClick={() => enableWallet('nami')}>
+          <button className={styles.card} onClick={() => enableWallet(`nami`)}>
             <h2>NAMI </h2>
           </button>
-          <button className={styles.card} onClick={() => enableWallet('flint')}>
+          <button className={styles.card} onClick={() => enableWallet(`flint`)}>
             <h2>FLINT </h2>
           </button>
-          <button className={styles.card} onClick={() => enableWallet('eternl')}>
-            <h2>ETERNL</h2>
+          <button
+            className={styles.card}
+            onClick={() => enableWallet(`eternl`)}
+          >
+            <h2>ETERNL </h2>
           </button>
           <button className={styles.card}>
             <h2>Simple TX</h2>
@@ -46,7 +49,7 @@ export default function Home() {
           <p className={styles.code}>getChangeAddress()</p>
           <code className={styles.code} id="changeAddress"></code>
           <p></p>
-          
+
           <p className={styles.code}>getCollateral()</p>
           <code className={styles.code} id="collateral"></code>
           <p></p>

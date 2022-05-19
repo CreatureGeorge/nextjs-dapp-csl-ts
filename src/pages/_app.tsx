@@ -5,10 +5,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-export{};
+export {};
 
 declare global {
-    interface Window {
-        cardano?: any;
-    }
+  interface Window {
+    cardano?: any;
   }
+}
