@@ -24,6 +24,13 @@ export async function enableWallet(walletName) {
     walletName == `nami`
       ? await wallet.experimental.getCollateral()
       : await wallet.getCollateral();
+
+  const collateralJSON = {};
+  const collateralUtxos = collateral.map((utxo) =>
+    csl.TransactionUnspentOutput.from_bytes(Buffer.from(utxo, `hex`)),
+  );
+  readTransactionUnspentOutput(collateralJSON, collateralUtxos[0]);
+
   const network =
     networkID == 0
       ? `testnet`
@@ -58,7 +65,11 @@ export async function enableWallet(walletName) {
     changeAddress,
     csl,
   );
-  document.getElementById(`collateral`).innerHTML = collateral;
+  document.getElementById(`collateral`).innerHTML = JSON.stringify(
+    collateralJSON,
+    null,
+    2,
+  );
   document.getElementById(`networkID`).innerHTML = network;
 
   document.getElementById(`rewardAddresses`).innerHTML = rewardAddresses;
