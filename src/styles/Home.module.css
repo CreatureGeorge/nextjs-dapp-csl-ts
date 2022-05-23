@@ -125,7 +125,3 @@
     flex-direction: column;
   }
 }
-
-.body {
-  overflow: scroll;
-}

@@ -1,4 +1,4 @@
-class CardanoWasm {
+class CardanoBrowserWasm {
   async load() {
     if (this._wasm) return;
     /**
@@ -14,4 +14,4 @@ class CardanoWasm {
   }
 }
 
-export default new CardanoWasm();
+export default new CardanoBrowserWasm();
